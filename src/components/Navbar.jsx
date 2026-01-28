@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import Logo from "../../public/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center xl:px-30 lg:px-20 px-10 h-20">
         {/* Logo */}
         <Link to="/" onClick={() => setIsOpen(false)}>
-          <img
-            src="/src/assets/logo.png"
-            alt="Logo"
-            className="w-16 h-16 object-contain"
-          />
+          <img src={Logo} alt="Logo" className="w-16 h-16 object-contain" />
         </Link>
 
         {/* Desktop Menu */}
