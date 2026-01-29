@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Testimonials() {
   const reviews = [
@@ -15,26 +16,45 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 px-6 bg-main">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-blue-600 mb-10 italic uppercase">
-          What Clients Say
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
+    <section className="py-24 px-6 bg-bg-light dark:bg-bg-dark transition-colors duration-500">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-black text-brand-navy dark:text-white uppercase italic tracking-tighter">
+            What Clients <span className="text-brand-gold">Say</span>
+          </h2>
+          <div className="w-20 h-1.5 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        {/* Reviews Grid */}
+        <div className="grid md:grid-cols-2 gap-10">
           {reviews.map((r, i) => (
-            <div
+            <motion.div
               key={i}
-              className="p-8 bg-[#f2f2f2] rounded-3xl relative italic"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.2 }}
+              className="p-10 bg-white dark:bg-slate-800/40 rounded-3xl relative shadow-xl border border-slate-100 dark:border-white/5"
             >
-              <span className="text-6xl text-team-name absolute top-2 left-4 opacity-20">
+              {/* Quote Icon - Gold Color */}
+              <span className="text-7xl text-brand-gold absolute top-2 left-6 opacity-20 font-serif">
                 “
               </span>
-              <p className="text-gray-600 relative z-10 mb-4">{r.text}</p>
-              <h4 className="font-bold text-blue-600">{r.name}</h4>
-              <p className="text-xs text-gray-400 font-bold uppercase">
-                {r.role}
+
+              <p className="text-slate-600 dark:text-slate-300 relative z-10 mb-6 leading-relaxed italic text-lg">
+                {r.text}
               </p>
-            </div>
+
+              <div className="border-t border-slate-100 dark:border-white/10 pt-4">
+                <h4 className="font-bold text-brand-navy dark:text-brand-gold text-xl">
+                  {r.name}
+                </h4>
+                <p className="text-xs text-slate-400 dark:text-slate-500 font-bold uppercase tracking-widest mt-1">
+                  {r.role}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

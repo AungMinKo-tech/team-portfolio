@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import {
   HiOutlineDesktopComputer,
   HiOutlineDeviceMobile,
@@ -30,36 +30,59 @@ export default function ServicesPreview() {
   ];
 
   return (
-    <section className="py-16 px-6 bg-main flex flex-col items-center">
+    <section className="py-24 px-6 bg-bg-light dark:bg-bg-dark transition-colors duration-500 flex flex-col items-center">
       {/* Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-blue-600 uppercase tracking-tight">
-          What We <span className="text-team-name">Do</span>
-        </h2>
-        <div className="w-16 h-1 bg-team-name mx-auto mt-2"></div>
+      <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-black text-brand-navy dark:text-white uppercase tracking-tight">
+            What We <span className="text-brand-gold">Do</span>
+          </h2>
+          <div className="w-16 h-1.5 bg-brand-gold mx-auto mt-3 rounded-full"></div>
+        </motion.div>
       </div>
 
-      {/* Card */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+      {/* Grid Container */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
         {services.map((item, index) => (
-          <Link
-            to={item.link}
+          <motion.div
             key={index}
-            className="group bg-[#f8f8f8] p-8 rounded-2xl border border-transparent hover:border-team-name hover:bg-white hover:shadow-xl transition-all duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
           >
-            <div className="text-4xl text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
-              {item.icon}
-            </div>
-            <h3 className="text-xl font-bold text-blue-600 mb-3 uppercase italic">
-              {item.title}
-            </h3>
-            <p className="text-gray-500 text-sm leading-relaxed mb-4">
-              {item.desc}
-            </p>
-            <span className="text-team-name font-bold text-xs uppercase tracking-widest group-hover:underline">
-              Learn More →
-            </span>
-          </Link>
+            <Link
+              to={item.link}
+              className="group block h-full bg-white dark:bg-slate-800/40 p-10 rounded-3xl border border-transparent hover:border-brand-gold/50 hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
+            >
+              {/* Icon */}
+              <div className="text-5xl text-brand-navy dark:text-brand-gold mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300">
+                {item.icon}
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-black text-brand-navy dark:text-white mb-4 uppercase italic tracking-wide">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                {item.desc}
+              </p>
+
+              {/* Learn More Link */}
+              <span className="inline-flex items-center text-brand-gold font-bold text-xs uppercase tracking-[0.2em] group-hover:gap-2 transition-all">
+                Learn More{" "}
+                <span className="ml-1 group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </span>
+            </Link>
+          </motion.div>
         ))}
       </div>
     </section>

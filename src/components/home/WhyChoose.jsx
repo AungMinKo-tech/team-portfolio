@@ -25,18 +25,11 @@ const WhyChooseUs = () => {
     },
   ];
 
-  // Container Animation
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
-  // Card Animation
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -47,19 +40,19 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-main overflow-hidden">
+    <section className="py-24 px-6 bg-bg-light dark:bg-bg-dark overflow-hidden transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
-        {/* Title Animation */}
+        {/* Title Section */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-blue-900 uppercase tracking-tighter">
-            Why Choose <span className="text-team-name">Us?</span>
+          <h2 className="text-4xl md:text-5xl font-black text-brand-navy dark:text-white uppercase tracking-tighter">
+            Why Choose <span className="text-brand-gold">Us?</span>
           </h2>
-          <div className="w-20 h-1.5 bg-team-name mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1.5 bg-brand-gold mx-auto mt-4 rounded-full"></div>
         </motion.div>
 
         {/* Animated Cards Grid */}
@@ -76,18 +69,17 @@ const WhyChooseUs = () => {
               variants={itemVariants}
               whileHover={{
                 scale: 1.05,
-                rotateY: 10,
-                boxShadow: "0px 10px 30px rgba(0,0,0,0.1)",
+                boxShadow: "0px 20px 40px rgba(0,0,0,0.1)",
               }}
-              className="bg-white p-8 rounded-3xl border-b-8 border-team-name cursor-pointer perspective-1000"
+              className="bg-white dark:bg-slate-800/50 p-8 rounded-3xl border-b-8 border-brand-gold dark:border-brand-navy cursor-pointer backdrop-blur-sm transition-colors shadow-sm"
             >
               <div className="text-5xl mb-6 filter drop-shadow-md">
                 {item.icon}
               </div>
-              <h3 className="font-extrabold text-blue-900 text-xl mb-3 uppercase italic">
+              <h3 className="font-extrabold text-brand-navy dark:text-brand-gold text-xl mb-3 uppercase italic">
                 {item.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium">
+              <p className="text-slate-500 dark:text-slate-300 text-sm leading-relaxed font-medium">
                 {item.desc}
               </p>
             </motion.div>

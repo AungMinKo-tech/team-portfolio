@@ -1,8 +1,26 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-main: #DDDDDD;
-  --color-team-name: #B8860B;
+  /* Brand Colors */
+  --color-brand-navy: #1B315E;
+  --color-brand-gold: #B8860B;
+  --color-brand-silver: #94A3B8;
+
+  /* Background Colors */
+  --color-bg-light: #F5F1E3;
+  --color-bg-dark: #1C1E29;
+
+  /* Text Colors */
+  --color-text-primary-light: #0F172A;
+  --color-text-primary-dark: #F1F5F9;
+  --color-text-secondary: #64748B;
+
+  /* UI Elements */
+  --color-accent: var(--color-brand-gold);
+  --color-primary: var(--color-brand-navy);
+  --color-team-name: var(--color-brand-gold); 
 }
 
 @layer utilities {

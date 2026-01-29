@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   HiCode,
   HiColorSwatch,
@@ -13,36 +14,58 @@ const Services = () => {
   const allServices = [
     {
       title: "Web Development",
-      desc: "We create custom web solutions using the latest technologies.",
+      desc: "We create custom web solutions using the latest technologies and best practices.",
       icon: <HiCode />,
       features: ["React & Next.js", "PHP & Laravel", "Node.js", "Admin Panels"],
     },
     {
       title: "UI/UX Design",
-      desc: "We create user-friendly and modern designs that are pleasing to the eye.",
+      desc: "We create user-friendly and modern designs that focus on conversion and accessibility.",
       icon: <HiColorSwatch />,
-      features: ["Figma Design", "Prototyping", "User Research"],
+      features: [
+        "Figma Design",
+        "Prototyping",
+        "User Research",
+        "Design Systems",
+      ],
     },
     {
       title: "Mobile App",
-      desc: "We build apps that can be used conveniently on both iOS and Android.",
+      desc: "High-performance native and cross-platform mobile applications for all devices.",
       icon: <HiDeviceMobile />,
       features: ["React Native", "Smooth Performance", "App Store Publishing"],
     },
     {
       title: "Maintenance",
-      desc: "We provide the support you need to keep your website active.",
+      desc: "Reliable support and continuous updates to keep your platform secure and up-to-date.",
       icon: <HiLightningBolt />,
-      features: ["24/7 Support", "Bug Fixes", "Security Updates"],
+      features: [
+        "24/7 Support",
+        "Bug Fixes",
+        "Security Updates",
+        "Speed Optimization",
+      ],
     },
   ];
 
   return (
-    <main className="bg-main">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-bg-light dark:bg-bg-dark min-h-screen transition-colors duration-500 overflow-x-hidden"
+    >
       <Header />
-      <Card allServices={allServices} />
-      <CallToAction />
-    </main>
+      <div className="relative">
+        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-brand-gold/5 blur-[150px] pointer-events-none"></div>
+
+        <Card allServices={allServices} />
+      </div>
+      <div className="pb-20">
+        <CallToAction />
+      </div>
+    </motion.main>
   );
 };
 
