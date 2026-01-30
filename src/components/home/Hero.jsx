@@ -6,16 +6,16 @@ import HeroPhotoDark from "@/assets/heroDark.png";
 export default function Hero() {
   return (
     <div className="bg-bg-light dark:bg-bg-dark transition-colors duration-500">
-      <section className="flex flex-col md:flex-row padding items-center min-h-[80vh] gap-10">
+      <section className="flex flex-col md:flex-row items-center min-h-[80vh] gap-10 px-6 pt-32 md:pt-20 md:px-20">
         {/* Left Side: Content */}
-        <div className="w-full md:w-[50%] flex justify-center md:justify-start">
+        <div className="w-full md:w-[50%] flex justify-center md:justify-start md:pt-10">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full lg:w-[80%] flex flex-col gap-6"
           >
-            <h1 className="text-5xl lg:text-7xl font-bold text-brand-navy dark:text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-brand-navy dark:text-white leading-tight">
               One{" "}
               <span className="text-brand-gold font-extrabold italic">
                 Tech MM
