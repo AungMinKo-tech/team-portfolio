@@ -1,4 +1,4 @@
-[
+export const members = [
   {
     "id": 1,
     "name": "Aung Aung",
