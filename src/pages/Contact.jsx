@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "../components/contact/Header";
-import ContactInfo from "../components/contact/ContactInfo";
-import ContactForm from "../components/contact/ContactForm";
+import Header from "@/components/contact/Header";
+import ContactInfo from "@/components/contact/ContactInfo";
+import ContactForm from "@/components/contact/ContactForm";
 
 const Contact = () => {
   return (

@@ -6,9 +6,9 @@ import {
   HiDeviceMobile,
   HiLightningBolt,
 } from "react-icons/hi";
-import Header from "../components/services/Header";
-import Card from "../components/services/Card";
-import CallToAction from "../components/services/CallToAction";
+import Header from "@/components/services/Header";
+import Card from "@/components/services/Card";
+import CallToAction from "@/components/services/CallToAction";
 
 const Services = () => {
   const allServices = [
@@ -57,11 +57,8 @@ const Services = () => {
       className="bg-bg-light dark:bg-bg-dark min-h-screen transition-colors duration-500 overflow-x-hidden"
     >
       <Header />
-      <div className="relative">
-        <div className="absolute top-1/2 left-0 w-full h-1/2 bg-brand-gold/5 blur-[150px] pointer-events-none"></div>
 
-        <Card allServices={allServices} />
-      </div>
+      <Card allServices={allServices} />
       <div className="pb-20">
         <CallToAction />
       </div>

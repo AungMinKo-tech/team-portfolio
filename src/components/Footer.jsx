@@ -21,13 +21,13 @@ export default function Footer() {
               {[
                 {
                   icon: <FaFacebookF />,
-                  link: "https://facebook.com/onetechmm",
+                  link: "#",
                 },
                 {
                   icon: <FaLinkedinIn />,
-                  link: "https://linkedin.com/company/onetechmm",
+                  link: "#",
                 },
-                { icon: <FaTelegramPlane />, link: "https://t.me/onetechmm" },
+                { icon: <FaTelegramPlane />, link: "#" },
               ].map((social, idx) => (
                 <a
                   key={idx}

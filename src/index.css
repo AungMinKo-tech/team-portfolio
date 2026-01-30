@@ -8,9 +8,15 @@
   --color-brand-gold: #B8860B;
   --color-brand-silver: #94A3B8;
 
+  /* Navbar background (Light mode and dark mode)*/
+  --background-image-bg-navbar: linear-gradient(135deg,#F2F2F2,#D9D9D9,#BFBFBF,#E6E6E6);
+  --background-image-bg-navbar-dark: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+
   /* Background Colors */
-  --color-bg-light: #F5F1E3;
-  --color-bg-dark: #1C1E29;
+  /* --color-bg-light: #F5F1E3; */
+  --background-image-bg-light: linear-gradient(90deg, #FEF3D8, #FDDC7D, #D4A017);
+  --background-image-bg-dark: radial-gradient(circle at center, #020617 0%, #0f172a 40%, #1e293b 100%);
+  /* --color-bg-dark: #1C1E29; */
 
   /* Text Colors */
   --color-text-primary-light: #0F172A;

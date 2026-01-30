@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <section className="py-24 bg-bg-light dark:bg-bg-dark text-center px-6 transition-colors duration-500 overflow-hidden relative">
+    <section className="py-24 text-center px-6 transition-colors duration-500 overflow-hidden relative">
       {/* Background Glow Effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-gold/5 blur-[120px] pointer-events-none"></div>
 

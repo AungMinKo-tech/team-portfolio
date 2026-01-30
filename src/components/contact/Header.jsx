@@ -1,12 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Snowfall from "react-snowfall";
 
 const Header = () => {
   return (
     <section className="pt-24 pb-32 bg-brand-navy dark:bg-bg-dark text-center px-6 relative overflow-hidden transition-colors duration-500">
+      <Snowfall />
       {/* Background Subtle Gradient Effect */}
-      <div className="absolute inset-0 bg-linear-to-b from-black/20 to-transparent pointer-events-none"></div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-gold/5 blur-[120px] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/20 to-transparent pointer-events-none z-1"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-brand-gold/5 blur-[120px] pointer-events-none z-1"></div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}

@@ -1,9 +1,9 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import HeroPhoto from "../assets/heroLight.png";
-import Header from "../components/about-us/Header";
-import Story from "../components/about-us/Story";
-import Techskill from "../components/about-us/Techskill";
+import AboutPhoto from "@/assets/aboutUsPhoto.png";
+import Header from "@/components/about-us/Header";
+import Story from "@/components/about-us/Story";
+import Techskill from "@/components/about-us/Techskill";
 
 export default function AboutUs() {
   return (
@@ -16,7 +16,7 @@ export default function AboutUs() {
     >
       <Header />
       <div className="space-y-12 md:space-y-24 pb-24">
-        <Story HeroPhoto={HeroPhoto} />
+        <Story AboutPhoto={AboutPhoto} />
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

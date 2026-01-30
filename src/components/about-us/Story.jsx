@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function Story({ HeroPhoto }) {
+export default function Story({ AboutPhoto }) {
   return (
     <section className="py-24 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 transition-colors duration-500">
       {/* Photo Section */}
@@ -15,9 +15,9 @@ export default function Story({ HeroPhoto }) {
         <div className="absolute -inset-4 bg-brand-gold/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
         <img
-          src={HeroPhoto}
+          src={AboutPhoto}
           alt="Our Story"
-          className="relative z-10 rounded-[3rem] shadow-2xl border-4 border-white dark:border-white/10 grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700 object-cover w-full h-100"
+          className="relative z-10 rounded-[3rem] group-hover:grayscale-0 transition-all duration-700 object-cover w-full h-100"
         />
       </motion.div>
 

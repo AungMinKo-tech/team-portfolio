@@ -32,7 +32,7 @@ export default function Techskill() {
                 <span className="font-black text-brand-navy dark:text-white text-lg uppercase italic tracking-wide">
                   {s.skill}
                 </span>
-                <span className="font-black text-brand-gold text-xl italic">
+                <span className="font-black dark:text-brand-gold text-xl italic">
                   {s.level}
                 </span>
               </div>

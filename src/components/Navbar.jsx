@@ -10,10 +10,10 @@ export default function Navbar() {
   const linkClass = ({ isActive }) =>
     isActive
       ? "text-brand-gold font-bold border-b-2 border-brand-gold pb-1"
-      : "text-white hover:text-brand-gold transition-all duration-300";
+      : "text-black dark:text-white hover:text-brand-gold transition-all duration-300";
 
   return (
-    <nav className="bg-brand-navy dark:bg-bg-dark sticky top-0 z-100 shadow-lg">
+    <nav className="bg-bg-navbar dark:bg-bg-navbar-dark sticky top-0 z-100 shadow-lg">
       <div className="flex justify-between items-center xl:px-30 lg:px-20 px-10 h-20">
         {/* Logo */}
         <Link to="/" onClick={() => setIsOpen(false)}>

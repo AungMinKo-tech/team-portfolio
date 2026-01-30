@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Card = ({ allServices }) => {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto bg-bg-light dark:bg-bg-dark transition-colors duration-500">
+    <section className="max-w-7xl mx-auto p-20 transition-colors duration-500">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {allServices.map((s, i) => (
           <motion.div

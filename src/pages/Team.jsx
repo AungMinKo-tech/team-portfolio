@@ -1,32 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import PersonOne from "../assets/person1.jpeg";
-import PersonTwo from "../assets/person2.jpeg";
-import PersonThree from "../assets/person3.jpeg";
-import Card from "../components/team/Card";
+import Card from "@/components/team/Card";
 
 const Team = () => {
-  const members = [
-    {
-      name: "Aung Kyaw",
-      role: "Founder & Lead Developer",
-      img: PersonOne,
-      bio: "Focuses on high-end scalable web solutions.",
-    },
-    {
-      name: "Su Su",
-      role: "Senior UI/UX Designer",
-      img: PersonTwo,
-      bio: "Specializes in creating user-centric digital experiences.",
-    },
-    {
-      name: "Min Khant",
-      role: "Project Manager",
-      img: PersonThree,
-      bio: "Expert in agile methodology and client communications.",
-    },
-  ];
-
   return (
     <main className="bg-bg-light dark:bg-bg-dark py-24 px-6 min-h-screen transition-colors duration-500 relative overflow-hidden">
       {/* Background Decor*/}
@@ -66,7 +42,7 @@ const Team = () => {
         </div>
 
         {/* Team Cards Grid */}
-        <Card members={members} />
+        <Card />
       </div>
     </main>
   );

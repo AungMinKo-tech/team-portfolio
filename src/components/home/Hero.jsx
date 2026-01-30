@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import HeroPhotoLight from "../../assets/heroLight.png";
-import HeroPhotoDark from "../../assets/heroDark.png";
+import HeroPhotoLight from "@/assets/heroLight.png";
+import HeroPhotoDark from "@/assets/heroDark.png";
 
 export default function Hero() {
   return (

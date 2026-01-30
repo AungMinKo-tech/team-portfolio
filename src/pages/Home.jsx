@@ -1,9 +1,9 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Hero from "../components/home/Hero";
-import ServicesPreview from "../components/home/ServicesPreview";
-import Testimonials from "../components/home/Testimonial";
-import WhyChooseUs from "../components/home/WhyChoose";
+import Hero from "@/components/home/Hero";
+import ServicesPreview from "@/components/home/ServicesPreview";
+import Testimonials from "@/components/home/Testimonial";
+import WhyChooseUs from "@/components/home/WhyChoose";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         <Hero />
 
         {/* Section Spacing */}
-        <div className="flex flex-col gap-0 md:gap-10">
+        <div className="flex flex-col">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
