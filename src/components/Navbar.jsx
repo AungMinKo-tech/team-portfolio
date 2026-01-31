@@ -66,7 +66,7 @@ export default function Navbar() {
 
       {/* Mobile Sidebar Overlay */}
       <div
-        className={`fixed inset-0 bg-blue-900 transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out md:hidden z-[-1] pt-24 px-10`}
+        className={`fixed inset-0 bg-bg-navbar dark:bg-bg-dark transform ${isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out md:hidden z-[-1] pt-24 px-10`}
       >
         <div className="flex flex-col gap-8 text-xl">
           <NavLink
