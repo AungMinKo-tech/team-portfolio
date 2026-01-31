@@ -16,7 +16,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-bg-light dark:bg-bg-dark transition-colors duration-500">
+    <section className="py-24 px-6 transition-colors duration-500">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

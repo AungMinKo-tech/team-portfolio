@@ -3,11 +3,22 @@ import { motion } from "framer-motion";
 import HeroPhotoLight from "@/assets/heroLight.png";
 import HeroPhotoDark from "@/assets/heroDark.png";
 import { Link } from "react-router-dom";
+import SparklesEffect from "../../ui/SparklesEffect";
 
 export default function Hero() {
+  const arrowVariants = {
+    initial: { x: -10, opacity: 0, width: 0 },
+    hover: {
+      x: 0,
+      opacity: 1,
+      width: "auto",
+      transition: { duration: 0.3, ease: "easeOut" },
+    },
+  };
   return (
-    <div className="bg-bg-light dark:bg-bg-dark transition-colors duration-500">
+    <div className="transition-colors duration-500">
       <section className="flex flex-col md:flex-row items-center min-h-[80vh] gap-10 px-6 pt-32 md:pt-20 md:px-30">
+        <SparklesEffect />
         {/* Left Side: Content */}
         <div className="w-full md:w-[50%] flex justify-center md:justify-start md:pt-10">
           <motion.div
@@ -30,11 +41,35 @@ export default function Hero() {
             <div className="flex gap-4">
               <Link to="/services">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  initial="initial"
+                  whileHover="hover"
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-brand-navy dark:bg-brand-gold text-white dark:text-brand-navy font-bold rounded-full shadow-lg transition-all cursor-pointer"
+                  className="relative px-8 py-3 bg-brand-navy dark:bg-brand-gold text-white font-bold rounded-full shadow-lg flex items-center justify-center overflow-hidden cursor-pointer"
                 >
-                  Explore More
+                  {/* Shimmer Effect */}
+                  <div className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
+
+                  <span className="relative z-10">Explore More</span>
+
+                  <motion.span
+                    variants={arrowVariants}
+                    className="relative z-10 flex items-center ml-2"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={3}
+                      stroke="currentColor"
+                      className="w-5 h-5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                      />
+                    </svg>
+                  </motion.span>
                 </motion.button>
               </Link>
             </div>

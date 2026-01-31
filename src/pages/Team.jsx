@@ -18,7 +18,8 @@ const Team = () => {
           >
             <h1 className="text-5xl md:text-7xl font-black text-brand-navy dark:text-white uppercase italic tracking-tighter leading-tight">
               The People Behind <br />
-              <span className="text-brand-gold">One Tech MM</span>
+              <span>One </span>
+              <span className="text-brand-gold">Tech MM</span>
             </h1>
 
             {/* Divider Line */}

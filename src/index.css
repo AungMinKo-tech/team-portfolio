@@ -28,12 +28,3 @@
   --color-primary: var(--color-brand-navy);
   --color-team-name: var(--color-brand-gold); 
 }
-
-@layer utilities {
-  .padding {
-    @apply xl:px-30 lg:px-20 md:px-10 px-5;
-  }
-  .button {
-    @apply bg-team-name text-white font-semibold px-4 py-1.5 rounded-md;
-  }
-}

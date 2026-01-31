@@ -30,7 +30,7 @@ export default function ServicesPreview() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-bg-light dark:bg-bg-dark transition-colors duration-500 flex flex-col items-center">
+    <section className="py-24 px-6 transition-colors duration-500 flex flex-col items-center">
       {/* Header */}
       <div className="text-center mb-16">
         <motion.div

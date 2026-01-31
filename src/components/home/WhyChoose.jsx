@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-bg-light dark:bg-bg-dark overflow-hidden transition-colors duration-500">
+    <section className="py-24 px-6 overflow-hidden transition-colors duration-500">
       <div className="max-w-6xl mx-auto">
         {/* Title Section */}
         <motion.div
