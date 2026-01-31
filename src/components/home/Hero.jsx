@@ -6,7 +6,7 @@ import HeroPhotoDark from "@/assets/heroDark.png";
 export default function Hero() {
   return (
     <div className="bg-bg-light dark:bg-bg-dark transition-colors duration-500">
-      <section className="flex flex-col md:flex-row items-center min-h-[80vh] gap-10 px-6 pt-32 md:pt-20 md:px-20">
+      <section className="flex flex-col md:flex-row items-center min-h-[80vh] gap-10 px-6 pt-32 md:pt-20 md:px-30">
         {/* Left Side: Content */}
         <div className="w-full md:w-[50%] flex justify-center md:justify-start md:pt-10">
           <motion.div

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import Logo from "../../public/logo.png";
+import LogoLight from "../../public/logoLight.png";
+import LogoDark from "../../public/logoDark.png";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
@@ -17,7 +18,19 @@ export default function Navbar() {
       <div className="flex justify-between items-center xl:px-30 lg:px-20 px-10 h-20">
         {/* Logo */}
         <Link to="/" onClick={() => setIsOpen(false)}>
-          <img src={Logo} alt="Logo" className="w-16 h-16 object-contain" />
+          {/* Light Mode */}
+          <img
+            src={LogoLight}
+            alt="Logo Light"
+            className="w-30 h-30 object-contain dark:hidden"
+          />
+
+          {/* Dark Mode */}
+          <img
+            src={LogoDark}
+            alt="Logo Dark"
+            className="w-30 h-30 object-contain hidden dark:block"
+          />
         </Link>
 
         {/* Desktop Menu */}
