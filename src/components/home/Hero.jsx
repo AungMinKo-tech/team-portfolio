@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import HeroPhotoLight from "@/assets/heroLight.png";
 import HeroPhotoDark from "@/assets/heroDark.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -27,13 +28,15 @@ export default function Hero() {
               excellence.
             </p>
             <div className="flex gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-brand-navy dark:bg-brand-gold text-white dark:text-brand-navy font-bold rounded-full shadow-lg transition-all"
-              >
-                Explore More
-              </motion.button>
+              <Link to="/services">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-brand-navy dark:bg-brand-gold text-white dark:text-brand-navy font-bold rounded-full shadow-lg transition-all cursor-pointer"
+                >
+                  Explore More
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
