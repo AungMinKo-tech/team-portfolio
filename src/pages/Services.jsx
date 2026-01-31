@@ -9,6 +9,7 @@ import {
 import Header from "@/components/services/Header";
 import Card from "@/components/services/Card";
 import CallToAction from "@/components/services/CallToAction";
+import WorkProcess from "../components/services/WorkProcess";
 
 const Services = () => {
   const allServices = [
@@ -57,11 +58,9 @@ const Services = () => {
       className="bg-bg-light dark:bg-bg-dark min-h-screen transition-colors duration-500 overflow-x-hidden"
     >
       <Header />
-
       <Card allServices={allServices} />
-      <div className="pb-20">
-        <CallToAction />
-      </div>
+      <WorkProcess />
+      <CallToAction />
     </motion.main>
   );
 };
